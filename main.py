@@ -9,8 +9,6 @@ from fake_useragent import FakeUserAgent
 from datetime import datetime
 from colorama import *
 import asyncio, random, secrets, string, time, json, re, os, pytz
-from pyfiglet import Figlet
-import shutil
 
 wib = pytz.timezone('Asia/Jakarta')
 
@@ -51,15 +49,15 @@ class Irys:
             flush=True
         )
 
-def welcome(self):
-        figlet = Figlet(font='ansi_shadow')
-        banner_lines = figlet.renderText('BG WIN').splitlines()
-        term_width = shutil.get_terminal_size().columns
-
-        for line in banner_lines:
-            print(Fore.GREEN + Style.BRIGHT + line.center(term_width) + Style.RESET_ALL
+    def welcome(self):
+        print(
+            f"""
+        {Fore.GREEN + Style.BRIGHT}Irys Game{Fore.BLUE + Style.BRIGHT} Auto BOT
+            """
+            f"""
+        {Fore.GREEN + Style.BRIGHT}Rey? {Fore.YELLOW + Style.BRIGHT}<INI WATERMARK>
+            """
         )
-
 
     def format_seconds(self, seconds):
         hours, remainder = divmod(seconds, 3600)
