@@ -696,7 +696,7 @@ class Irys:
         if balance <= self.deposit_amount:
             self.log(
                 f"{Fore.CYAN+Style.BRIGHT}   Status   :{Style.RESET_ALL}"
-                f"{Fore.YELLOW+Style.BRIGHT} Insufficient IRYS Token Balance {Style.RESET_ALL}"
+                f"{Fore.YELLOW+Style.BRIGHT} Insufficient IRYS Token Balance bg {Style.RESET_ALL}"
             )
             return
         
